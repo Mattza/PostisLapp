@@ -1,0 +1,14 @@
+<md-content>
+    <md-list>
+        <md-subheader class="md-no-sticky">{{main.events.length}} pågående event</md-subheader>
+        <md-list-item class="md-2-line" ng-repeat="event in main.events">
+            <div class="md-list-item-text">
+                <h3> {{ event.eventName }} </h3>
+                <p> {{ event.creator }} </p>
+            </div>
+          
+             <md-button class="md-secondary md-raised" ng-click="main.gotoEventAsServer(event)" style="margin-right:120px;">Projektor</md-button>
+             <md-button class="md-secondary md-raised md-primary" ng-click="main.gotoEventAsCreator(event)">User</md-button>
+        </md-list-item>
+    </md-list>
+</md-content>

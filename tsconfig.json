@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outFile": "/dist/app.js",
+    "sourceMap": true
+  },
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": true
+  }
+}

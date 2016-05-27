@@ -1,0 +1,10 @@
+<div class="server">
+    <md-card ng-repeat="post in server.postis" class="server-postis" ng-style="{left:post.position.left+'%',top:post.position.top+'%'}">
+        <md-card-content>
+            <p ng-bind="post.text"></p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <p>{{post.creator}}</p>
+        </md-card-actions>
+    </md-card>
+</div>

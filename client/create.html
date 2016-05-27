@@ -1,0 +1,33 @@
+<md-content layout-padding>
+    <section layout="column">
+        <section flex="80">
+            <form name="userForm">
+                <div class="create">
+                    <md-input-container>
+                        <label>Text</label>
+                        <textarea class="textarea" cols="30" rows="10" ng-model="create.currentPostis.text"></textarea>
+                    </md-input-container>
+                    <p>Färg:</p>
+                    <md-radio-group ng-model="create.currentPostis.color" class="md-primary">
+                        <md-radio-button ng-repeat="d in create.colorOptions" ng-value="d.hex" aria-label="{{ d.text }}">
+                            <span ng-style="{color:d.hex}">{{ d.text }}</span>
+                        </md-radio-button>
+                    </md-radio-group>
+                </div>
+            </form>
+            <div class="debug">
+                {{!create.currentPostis.text}}<br> {{create}}
+            </div>
+        </section>
+        <section flex="10" layout="row" layout-align="space-around center">
+            <md-button class="md-raised md-primary" ng-disabled="!create.currentPostis.text">
+                <md-tooltip ng-if="!create.currentPostis.text">
+                    Play Music
+                </md-tooltip>
+                Skapa lokalt
+            </md-button>
+            <md-button class="md-raised md-primary" ng-disabled="create.currentPostis.text">Presentation</md-button>
+        </section>
+    </section>
+
+</md-content>

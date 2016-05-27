@@ -1,0 +1,16 @@
+<div>
+    <div ng-repeat="postit in present.localPostis">
+        
+    </div>
+    <!--<input ng-model="user.text">-->
+    <p>status</p>
+    <input type="text" ng-model="present.status">
+    <p>alpha</p>
+    <input ng-model="present.positionDelta.diffX">
+    <p>beta</p>
+    <input ng-model="present.positionDelta.diffY">
+    
+    <button class="btn" ng-click="present.startPlacing()"><span>Place</span></button>
+    <button class="btn big" ng-show="present.placing" ng-click="present.endPlacing()"><span>Done</span></button>
+</div>
+
